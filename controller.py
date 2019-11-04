@@ -1,6 +1,6 @@
 from typing import Set, Any
 
-from arduino_controller.basicboard.board import ArduinoBoard
+from modular_arduino_controller.board.board import ArduinoBoard
 
 try:
     import Controller as ctrl
@@ -9,7 +9,7 @@ except:
 
 
 class Controller_GeneralController(ctrl.MetaController, ctrl.SerialController):
-    required_boards = ["AnyBoard"]
+    required_boards = []
 
     def __init__(self):
         super().__init__()
