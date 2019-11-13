@@ -6,12 +6,12 @@ import basic_controller.controller as ctrl
 
 
 class Controller_GeneralController(ctrl.MetaController):
-    required_boards = []
-
     def __init__(self):
         super().__init__()
-        self.serial_boards: Set[ArduinoBoard] = set()
+        self.required_controller = ctrl.AyWT("BoardController")
 
+    def possible_controller_added(self,controller):
+        print("HERE",self.possible_controller)
 
 if __name__ == "__main__":
     a = Controller_GeneralController()
